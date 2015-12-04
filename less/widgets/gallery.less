@@ -1,0 +1,275 @@
+// ------------------------------------
+// Facet Template: CSS > Widgets > Gallery
+// ------------------------------------
+
+
+
+
+// Breakpoints for gallery layouts
+// -------------------------------
+
+@gallery-4col: ~"only screen and (min-width : 1300px)";
+@gallery-3col: ~"only screen and (min-width : 850px) and (max-width : 1300px)";
+@gallery-2col: ~"only screen and (min-width : 500px) and (max-width : 850px)";
+@gallery-1col: ~"only screen and (min-width : 1px) and (max-width : 500px)";
+
+
+
+
+// Gallery Item
+// ------------------------------
+
+
+.gallery__gallery-item {
+	float: left;
+	height: 0; // Height is achieved using padding-bottom
+	overflow: hidden;
+	position: relative;
+
+
+	// 4 Columns Layout
+
+	@media @gallery-4col {
+		width: 24%;
+		padding-bottom: 24%;
+		margin: 0 1.33% 1.33% 0;
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+	}
+
+
+	// 3 Columns Layout
+
+	@media @gallery-3col {
+		width: 32.5%;
+		padding-bottom: 32%;
+		margin: 0 1.25% 1.25% 0;
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+
+
+	// 2 Columns Layout
+
+	@media @gallery-2col {
+		width: 49%;
+		padding-bottom: 49%;
+		margin: 0 2% 2% 0;
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+
+
+	// 1 Column Layout
+
+	@media @gallery-1col {
+		width: 100%;
+		height: auto;
+		padding-bottom: 0;
+		margin: 0 0 4% 0;
+	}
+}
+
+
+
+
+// Gallery Captions
+// ------------------------------
+
+
+.gallery__caption {
+	margin: 0; // LESS Framework reset
+}
+
+
+
+
+// Gallery Captions
+// ------------------------------
+
+
+.caption-link {
+	background-color: fade(@contrast-color, 80%);
+}
+
+
+// Gallery Image Title
+
+.gallery__image-title {
+	display: block;
+	position: relative;
+	padding: 1em 2em 1em 6%;
+	color: contrast(@color-swatch7, #000, #fff);
+	background-color: @color-swatch7;
+
+	@media @gallery-2col {
+		font-size: bkscale(@font-swatch5-font-size, 0.88);
+		line-height: bkscale(@font-swatch5-line-height, 0.88);
+	}
+
+	@media @gallery-1col {
+		font-size: bkscale(@font-swatch5-font-size, 0.77);
+		line-height: bkscale(@font-swatch5-line-height, 0.77);
+		padding: 0.7em 2em 0.7em 4%;
+	}
+
+	// + Icon
+	&:after {
+		content: '\f067';
+		font-family: 'FontAwesome', sans-serif;
+		position: absolute;
+		right: 5%;
+		width: 1.5em;
+		height: 1.5em;
+		text-align: center;
+		line-height: 1.5em;
+		display: block;
+		top: 50%;
+		margin-top: -0.7em;
+		-webkit-font-smoothing: none;
+
+		@media @gallery-1col {
+			display: none;
+		}
+	}
+}
+
+
+// Gallery Image Description
+
+.gallery__image-description {
+	display: block;
+	width: 94%;
+	padding: 1em 4%;
+
+	@media @gallery-2col {
+		font-size: bkscale(@font-swatch5-font-size, 0.77);
+		line-height: bkscale(@font-swatch5-line-height, 0.77);
+	}
+
+	@media @gallery-1col {
+		padding: 0.8em 1em;
+		width: auto;
+		font-size: bkscale(@font-swatch5-font-size, 0.7);
+		line-height: bkscale(@font-swatch5-line-height, 0.7);
+	}
+}
+
+
+
+
+// Gallery Captions Versions
+// ------------------------------
+
+
+// A) Captions displayed on :hover
+@gallery-captions-hover: ~"only screen and (min-width : 500px)";
+
+// B) Captions displayed permanently
+@gallery-captions-permanent: ~"only screen and (max-width : 500px)";
+
+
+
+
+// A) Captions displayed on :hover
+
+@media @gallery-captions-hover {
+	.gallery__image-link {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		padding-bottom: 100%;
+		background-size: cover;
+		background-position: center center;
+	}
+
+	.gallery__image {
+		display: none; // Using background image instead
+	}
+
+
+	// Captions fade in/out
+
+	.caption-link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: auto;
+		opacity: 0;
+		-webkit-transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		-o-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+
+	// Image Title slides in from the left
+
+	.gallery__image-title {
+		left: -100%;
+		width: 94%;
+		margin-top: 6%;
+		-webkit-transition: left 0.3s ease-in-out;
+		-moz-transition: left 0.3s ease-in-out;
+		-o-transition: left 0.3s ease-in-out;
+		transition: left 0.3s ease-in-out;
+
+		.gallery__caption:hover & {
+			left: 0;
+		}
+	}
+}
+
+
+
+
+// B) Captions displayed permanently
+
+@media @gallery-captions-permanent {
+	.gallery__image, .gallery__image-link {
+		display: block;
+		width: 100%;
+	}
+
+	.gallery__image-description {
+		background: mix(@bg-color, @color-swatch7, 20%);
+		color: contrast(@color-swatch7, #000, #fff);
+	}
+}
+
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+@media @bp-global-columns {
+	.responsivecolumns {
+
+		// Caption
+
+		.caption.gallery__caption {
+			display: none;
+		}
+	}
+}

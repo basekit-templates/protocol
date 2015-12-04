@@ -1,0 +1,140 @@
+// -----------------------------------
+// Facet Template: CSS > Widgets > Images
+// -----------------------------------
+
+
+// ------------------------------
+//    Common Image Styles
+// ------------------------------
+
+// Image Link
+// ------------------------------
+
+
+.image-link {
+    display: inline-block;
+    overflow: hidden;
+}
+
+
+
+
+// Image Figure
+// ------------------------------
+
+
+.imagewidget__figure {
+    margin: 0;
+}
+
+
+
+// Image Alignment
+// ------------------------------
+
+
+.imagewidget__caption, .imagewidget {
+    text-align: center;
+}
+
+
+
+
+// Image Caption
+// ------------------------------
+
+
+.imagewidget__caption {
+    padding: 1em 0;
+}
+
+
+
+
+// Image Title
+// ------------------------------
+
+
+.image-title {
+    font-family: @font-swatch1-font-family;
+    font-size: @font-swatch5-font-size;
+    line-height: @font-swatch5-line-height;
+    padding-bottom: 0.2em;
+    @media @tablet {
+        font-size: bkscale(@font-swatch5-font-size, 0.9);
+        line-height: bkscale(@font-swatch5-line-height, 0.9);
+    }
+
+    @media @mobile {
+        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        line-height: bkscale(@font-swatch5-line-height, 0.8);
+    }
+}
+
+
+
+
+// Image Description
+// ------------------------------
+
+
+.image-description {
+    font-size: bkscale(@font-swatch5-font-size, 0.98);
+    line-height: bkscale(@font-swatch5-line-height, 0.98);
+    font-weight: 300;
+    @media @tablet {
+        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        line-height: bkscale(@font-swatch5-line-height, 0.8);
+    }
+
+    @media @mobile {
+        font-size: bkscale(@font-swatch5-font-size, 0.72);
+        line-height: bkscale(@font-swatch5-line-height, 0.72);
+    }
+}
+
+
+
+
+// ------------------------------
+//    Image Widget
+// ------------------------------
+
+
+
+
+// Align Left
+// ------------------------------
+
+
+.imagewidget.widget-align-left {
+    &, .caption {
+        text-align: left;
+    }
+}
+
+
+
+
+// Align Right
+// ------------------------------
+
+
+.imagewidget.widget-align-right {
+    &, .caption {
+        text-align: right;
+    }
+}
+
+
+
+
+// Align Center
+// ------------------------------
+
+
+.imagewidget.widget-align-center {
+    &, .caption {
+        text-align: center;
+    }
+}

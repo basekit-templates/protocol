@@ -1,0 +1,890 @@
+// --------------------------------------
+// Facet Template: CSS > Widgets > Slideshow
+// --------------------------------------
+
+
+
+// ---------------------------------
+// Breakpoints for slideshow layouts
+// ---------------------------------
+
+
+@slideshow-large: ~"only screen and (min-width : 1300px)";
+@slideshow-medium: ~"only screen and (min-width : 850px) and (max-width : 1300px)";
+@slideshow-small: ~"only screen and (max-width : 850px)";
+
+
+
+
+// ---------------------------------
+// Slides List
+// ---------------------------------
+
+
+responsiveslideshow__slides-list {
+	min-height: 400px;
+}
+
+
+// ------------------------------
+// Slideshow Item
+// ------------------------------
+
+
+.responsiveslideshow__slide-item {
+	position: relative;
+}
+
+// Prevents two slides from displaying at the same time
+// because of slow JS state changes
+
+.slide-item.current + .slide-item {
+	display: none;
+}
+
+.responsiveslideshow__image {
+	display: none;
+}
+
+
+
+
+// ------------------------------
+// Figure
+// ------------------------------
+
+
+.responsiveslideshow__figure {
+	min-height: 100px;
+	padding-bottom: 50%;
+	background-size: cover;
+	background-position: center;
+
+	@media @slideshow-small {
+		padding-bottom: 100%;
+	}
+}
+
+
+
+
+// ------------------------------
+// Slide Navigation
+// ------------------------------
+
+
+.slide-navigation {
+	display: block;
+	position: absolute;
+	top: 0;
+	margin: 0;
+
+
+
+
+	// Button
+	// ------------------------------
+
+
+	.button {
+		position: absolute;
+		padding: 0;
+		display: block;
+		text-align: center;
+
+		&:before {
+			margin: 0;
+		}
+	}
+
+
+
+
+	// Control Text
+	// ------------------------------
+
+
+	.control-text {
+		display: none;
+	}
+}
+
+
+
+
+// Previous Button
+// ------------------------------
+
+
+.responsiveslideshow__previous-button {
+
+	// Icon
+
+	&:before {
+		content: '\f104';
+		display: block;
+		margin: 0;
+	}
+}
+
+
+
+
+// Next Button
+// ------------------------------
+
+
+.responsiveslideshow__next-button {
+
+	// Icon
+
+	&:after {
+		content: '\f105';
+		display: block;
+		margin: 0;
+		padding-left: 0.1em;
+	}
+}
+
+
+
+
+// Pause Toggle
+// ------------------------------
+
+
+.responsiveslideshow__pause-toggle {
+
+	// Icon
+
+	&:before {
+		display: block;
+		margin: 0;
+	}
+
+	// Play Icon
+
+	&.pause:before {
+		content: '\f04b';
+	}
+}
+
+
+
+
+// ------------------------------
+//  Large Layout
+// ------------------------------
+
+
+@media @slideshow-large {
+
+
+
+
+	// Slide Navigation
+	// ------------------------------
+
+
+	.slide-navigation {
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		// Button
+
+		.button {
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			font-size: 36px;
+			top: 30px;
+		}
+	}
+
+	// Previous Button
+
+	.responsiveslideshow__previous-button {
+		left: 30px;
+	}
+
+	// Next Button
+
+	.responsiveslideshow__next-button {
+		right: 30px;
+	}
+
+	// Pause Toggle
+
+	.responsiveslideshow__pause-toggle {
+		left: 91px;
+		.pause-toggle-only & {
+			left: 30px;
+		}
+		&:before {
+			font-size: 18px;
+		}
+	}
+}
+
+
+
+
+// ------------------------------
+//  Medium Layout
+// ------------------------------
+
+
+@media @slideshow-medium {
+
+
+
+
+	// Slide Navigation
+	// ------------------------------
+
+
+	.slide-navigation {
+		left: 0;
+		right: 0;
+		bottom: auto;
+		height: 100px;
+		padding-bottom: 50%;
+
+		// Button
+
+		.button {
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 36px;
+			top: 50%;
+			margin-top: -20px;
+		}
+	}
+
+
+
+
+	// Previous Button
+	// ------------------------------
+
+
+	.responsiveslideshow__previous-button {
+		left: 0;
+	}
+
+
+
+
+	// Next Button
+	// ------------------------------
+
+
+	.responsiveslideshow__next-button {
+		right: 0;
+	}
+
+
+
+
+	// Pause Toggle
+	// ------------------------------
+
+
+	.responsiveslideshow__pause-toggle {
+		left: 41px;
+
+		.pause-toggle-only & {
+			left: 0;
+		}
+
+		// Icon
+
+		&:before {
+			font-size: 14px;
+		}
+	}
+}
+
+
+
+
+// ------------------------------
+//  Small Layout
+// ------------------------------
+
+
+@media @slideshow-small {
+
+
+
+
+	// Slide Navigation
+	// ------------------------------
+
+
+	.slide-navigation {
+		margin-top: 1px;
+		position: relative;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-direction: normal;
+		-moz-box-direction: normal;
+		-webkit-box-orient: horizontal;
+		-moz-box-orient: horizontal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		-webkit-box-pack: justify;
+		-moz-box-pack: justify;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-align-content: flex-start;
+		-ms-flex-line-pack: start;
+		align-content: flex-start;
+		-webkit-box-align: center;
+		-moz-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+
+		// Button
+
+		.button {
+			position: relative;
+			height: 40px;
+			line-height: 40px;
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+			-webkit-flex: 1 1 auto;
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+			width: 33%;
+			font-size: 30px;
+		}
+	}
+
+	// Pause Toggle
+
+	.responsiveslideshow__pause-toggle {
+		margin: 0 1px;
+		width: auto;
+		left: 0 !important;
+
+		&:before {
+			font-size: 12px;
+		}
+	}
+}
+
+
+
+
+// ------------------------------
+// Slideshow Captions
+// ------------------------------
+
+
+
+
+// Caption
+// ------------------------------
+
+
+.responsiveslideshow .caption {
+	padding: 0;
+}
+
+
+
+
+// Image Title, Image Description
+// ------------------------------
+
+
+.responsiveslideshow__image-title, .responsiveslideshow__image-description {
+	width: auto;
+}
+
+
+
+
+// Image Title
+// ------------------------------
+
+
+.responsiveslideshow__image-title {
+	background-color: @color-swatch7;
+	color: contrast(@color-swatch7, #000, #fff);
+	padding-bottom: 0;
+}
+
+
+
+
+// Image Description
+// ------------------------------
+
+
+.responsiveslideshow__image-description {
+	background: mix(@bg-color, @color-swatch7, 20%);
+	color: contrast(@color-swatch7, #000, #fff);
+}
+
+@media @slideshow-large {
+
+	// Caption
+
+	.responsiveslideshow .caption {
+		position: absolute;
+		width: auto;
+		left: 30px;
+		bottom: 30px;
+	}
+
+	// Image Title
+
+	.responsiveslideshow__image-title {
+		padding: 0.8em 6%;
+		position: relative;
+	}
+
+	// Image Description
+
+	.responsiveslideshow__image-description {
+		padding: 0.8em 6%;
+	}
+}
+
+@media @slideshow-medium {
+
+	// Caption
+
+	.responsiveslideshow .caption {
+		font-size: 0;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-direction: normal;
+		-moz-box-direction: normal;
+		-webkit-box-orient: horizontal;
+		-moz-box-orient: horizontal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-box-pack: start;
+		-moz-box-pack: start;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		-webkit-align-content: flex-start;
+		-ms-flex-line-pack: start;
+		align-content: flex-start;
+		-webkit-box-align: start;
+		-moz-box-align: start;
+		-webkit-align-items: flex-start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+		position: absolute;
+		bottom: 0;
+
+	}
+
+	// Image title, Image Description
+
+	.responsiveslideshow__image-title, .responsiveslideshow__image-description {
+		display: inline-block;
+		padding: 0.8em 1em;
+	}
+
+	// Image Title
+
+	.responsiveslideshow__image-title {
+		font-size: bkscale(@font-swatch5-font-size, 0.7);
+		line-height: bkscale(@font-swatch5-line-height, 0.7);
+	}
+
+	// Image Description
+
+	.responsiveslideshow__image-description {
+		font-size: bkscale(@font-swatch5-font-size, 0.7);
+		line-height: bkscale(@font-swatch5-line-height, 0.7);
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+	}
+}
+
+@media @slideshow-small {
+
+	// Caption
+
+	.responsiveslideshow .caption {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background: mix(@bg-color, @color-swatch7, 20%);
+		padding: 0.6em 0.8em;
+	}
+
+	// Image Title. Image Description
+
+	.responsiveslideshow__image-title, .responsiveslideshow__image-description {
+		color: contrast(@color-swatch7, #000, #fff);
+		background-color: transparent;
+		font-size: bkscale(@font-swatch5-font-size, 0.7);
+		line-height: bkscale(@font-swatch5-line-height, 0.7);
+	}
+}
+
+
+
+
+// ------------------------------
+// Slideshow Pagination
+// ------------------------------
+
+
+
+
+// Pagination Item
+// ------------------------------
+
+
+.slide-pagination {
+	position: relative;
+	bottom: auto;
+	right: auto;
+}
+
+
+
+
+// Pagination Item
+// ------------------------------
+
+
+.responsiveslideshow .responsiveslideshow__pagination-item {
+
+	// Button
+
+	.button {
+		cursor: pointer;
+		background-color: @button-color;
+		color: transparent;
+		padding: 0;
+		line-height: 1;
+		display: block;
+		border-radius: 0;
+
+		&:hover {
+			background-color: @button-hover-color;
+		}
+	}
+
+	// Selected Button
+
+	&.selected .button {
+		background-color: @heading-color;
+		color: contrast(@heading-color, #444, #fff);
+	}
+}
+
+
+
+
+
+
+@media @slideshow-large {
+
+
+
+
+	// Pagination List
+	// ------------------------------
+
+
+	.responsiveslideshow__pagination-list {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-direction: normal;
+		-moz-box-direction: normal;
+		-webkit-box-orient: horizontal;
+		-moz-box-orient: horizontal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-box-pack: justify;
+		-moz-box-pack: justify;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-align-content: flex-start;
+		-ms-flex-line-pack: start;
+		align-content: flex-start;
+		-webkit-box-align: start;
+		-moz-box-align: start;
+		-webkit-align-items: flex-start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+		margin-top: 15px;
+		min-height: 20px;
+	}
+
+
+
+
+	// Pagination Item
+	// ------------------------------
+
+
+	.responsiveslideshow__pagination-item {
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		margin: 0 2px 0 0;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		// Button
+
+		.button {
+			width: 100%;
+			height: 7px;
+			text-align: left;
+			padding: 0;
+			font-size: 12px;
+			min-height: 7px;
+			overflow: hidden;
+			padding: 0 0.3em;
+		}
+
+		// Selected Button
+
+		&.selected .button {
+			height: auto;
+			background-color: @color-swatch7;
+			padding: 0.3em;
+		}
+	}
+}
+
+@media @slideshow-medium {
+
+
+
+
+	// Pagination List
+	// ------------------------------
+
+
+	.responsiveslideshow__pagination-list {
+		display: block;
+		margin-top: 15px;
+		text-align: center;
+	}
+
+
+
+
+	// Pagination Item
+	// ------------------------------
+
+
+	.responsiveslideshow__pagination-item {
+		width: 14px;
+		height: 14px;
+		margin: 0 3px;
+
+		// Button
+
+		.button {
+			text-indent: 100%;
+			overflow: hidden;
+			height: 14px;
+			width: 14px;
+		}
+	}
+}
+
+@media @slideshow-small {
+
+
+
+
+	// Pagination List
+	// ------------------------------
+
+
+	.responsiveslideshow__pagination-list {
+		margin-top: 8px;
+		text-align: center;
+	}
+
+
+
+
+	// Pagination Item
+	// ------------------------------
+
+
+	.responsiveslideshow__pagination-item {
+		width: 10px;
+		height: 10px;
+		margin: 0 1px;
+		overflow: hidden;
+
+		// Button
+
+		.button {
+			text-indent: 100%;
+			overflow: hidden;
+		}
+	}
+}
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+@media @bp-global-columns {
+	.responsivecolumns {
+
+		.pause-toggle-only .responsiveslideshow__pause-toggle {
+			left: 0 !important;
+		}
+
+		// Caption
+
+		.responsiveslideshow .caption {
+			left: 0;
+			bottom: 0;
+		}
+
+		// Image Title, Image Description
+
+		.responsiveslideshow__image-title, .responsiveslideshow__image-description {
+			font-size: bkscale(@font-swatch5-font-size, 0.8);
+			padding: 0.4em 2%;
+			line-height: 1.4;
+		}
+
+		// Slide navigation
+
+		.slide-navigation {
+			top: 0px;
+		}
+
+		// Navigation button
+
+		.slide-navigation .button {
+			top: 0;
+			margin-top: 0;
+		}
+
+		// Previous button
+
+		.responsiveslideshow__previous-button {
+			left: 0;
+		}
+
+		// Next button
+
+		.responsiveslideshow__next-button {
+			right: 0;
+		}
+
+		// Pause Toggle
+
+		.responsiveslideshow__pause-toggle {
+			left: 41px;
+
+		}
+
+
+
+		// Pagination list
+
+		.responsiveslideshow__pagination-list {
+			margin-top: 1px;
+		}
+
+		// Pagination List
+
+		.responsiveslideshow__pagination-list {
+			display: block;
+			text-align: center;
+		}
+
+		// Pagination Item
+
+		.responsiveslideshow__pagination-item {
+			display: inline-block;
+		}
+
+		// Pagination Button
+
+		.responsiveslideshow__pagination-item .button, .responsiveslideshow__pagination-item.selected .button {
+			width: 8px;
+			height: 8px;
+			margin: 0;
+			overflow: hidden;
+			text-indent: 10px;
+			padding: 0;
+		}
+	}
+
+
+
+
+	// 4 columns
+	// ------------------------------
+
+
+	.columns-four-first,
+	.columns-four-second,
+	.columns-four-third,
+	.columns-four-fourth {
+		.responsiveslideshow .caption {
+			display: none;
+		}
+	}
+
+}
+
+
