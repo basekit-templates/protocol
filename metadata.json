@@ -1,6 +1,7 @@
 {
     "name":"protocol",
     "widgetVersion": 2,
+    "thumbnail":"protocol.png",
     "screenshot":"protocol-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
