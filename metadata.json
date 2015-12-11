@@ -5,7 +5,6 @@
     "thumbnail":"protocol.png",
     "templateType":"standard",
     "pageTypes": ["home"],
-    "tags": {
      "images":[
         "images/feature-bg.jpg",
         "images/logo.png",
