@@ -244,8 +244,8 @@
             "color__form-legend--text": "@font-swatch5-color"
         },
         "image": {
-            "color__image-title--text" :"color-swatch4",
-            "color__image-description--text" :"color-swatch4"
+            "color__image-title--text" :"@color-swatch4",
+            "color__image-description--text" :"@color-swatch4"
         },
         "gallery": {
             "color__gallery-caption--background": "@color__primary",
