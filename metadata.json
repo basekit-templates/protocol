@@ -224,7 +224,7 @@
             "color__feature-content--background" : "transparent",
             "color__feature-headline--text" : "@color-swatch6",
             "color__feature-strapline--text" : "@color-swatch6",
-            "color__feature-button--background" : "@color__secondary",
+            "color__feature-button--background" : "@color-swatch6",
             "color__feature-button--background--hover" : "@color__button--background--hover",
             "color__feature-button--text" : "@font-swatch4-color",
             "color__feature-button--background--hover" : "contrast(@color__button--background, darken(@color__button--background, 10%), lighten(@color__button--background, 10%))",
@@ -267,21 +267,21 @@
             "color__socialicons--text" : "@font-swatch5-color"
         },
         "blog": {
-            "color__blogsearch--background" : "@color__secondary",
+            "color__blogsearch--background" : "@color-swatch6",
             "color__blogsearch-legend--text" : "@color-swatch4",
-            "color__blogpost--background" : "@color__secondary"
+            "color__blogpost--background" : "@color-swatch6"
         },
         "ecommerce": {
-            "color__ecomproductslist-product-item--background" : "@color__secondary",
+            "color__ecomproductslist-product-item--background" : "@color-swatch6",
             "color__ecomproductslist-product-title--text" : "@color__link--text",
-            "color__ecomproduct-images--background" : "@color__secondary",
+            "color__ecomproduct-images--background" : "@color-swatch6",
             "color__ecomproduct-price--text" : "@color-swatch4"
         },
         "menu": {
-            "color__menu-item--background" : "@color__secondary",
+            "color__menu-item--background" : "@color-swatch6",
             "color__menu-section-featured--border" : "contrast(@color__primary, darken(@color__primary, 16%), lighten(@color__primary, 16%))",
-            "color__menu-section-header--background" : "@color__secondary",
-            "color__menu-section-featured--background" : "@color__secondary"
+            "color__menu-section-header--background" : "@color-swatch6",
+            "color__menu-section-featured--background" : "@color-swatch6",
         }
     }
 }
