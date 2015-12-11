@@ -281,7 +281,7 @@
             "color__menu-item--background" : "@color-swatch6",
             "color__menu-section-featured--border" : "contrast(@color__primary, darken(@color__primary, 16%), lighten(@color__primary, 16%))",
             "color__menu-section-header--background" : "@color-swatch6",
-            "color__menu-section-featured--background" : "@color-swatch6",
+            "color__menu-section-featured--background" : "@color-swatch6"
         }
     }
 }
