@@ -16,7 +16,7 @@
         "Swatch 1": {
             "color1":"#ffffff",
             "color2":"#ffffff",
-            "color3":"#1ECFB3",
+            "color3":"#4895e4",
             "color4":"#313131",
             "color5":"#313131",
             "color6":"#ffffff",
@@ -222,9 +222,10 @@
         },
         "feature": {
             "color__feature--background" : "fade(@color__primary, 30%)",
-            "color__feature-headline--text" : "@color-swatch4",
+            "color__feature-content--background" : "transparent",
+            "color__feature-headline--text" : "@color-swatch6",
             "color__feature-headline--background" : "@color__secondary",
-            "color__feature-strapline--text" : "@color-swatch4",
+            "color__feature-strapline--text" : "@color-swatch6",
             "color__feature-strapline--background" : "@color__secondary",
             "color__feature-button--background" : "@color__secondary",
             "color__feature-button--background--hover" : "@color__button--background--hover",
