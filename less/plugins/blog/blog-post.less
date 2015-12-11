@@ -35,7 +35,7 @@
         padding: 1px 13px;
         max-width: 1500px;
         margin: 0 auto;
-        background-color: @widget-bg-color;
+        background-color: @color__secondary;
     }
 
 
@@ -78,7 +78,7 @@
 
 
 .post-image {
-    background-color: contrast(@bg-color, lighten(@bg-color, 2%), darken(@bg-color, 2%));
+    background-color: contrast(@color__body--background, lighten(@color__body--background, 2%), darken(@color__body--background, 2%));
     position: relative;
     text-align: center;
 }
@@ -110,7 +110,7 @@
 
 
 .post-content {
-    background-color: @widget-bg-color;
+    background-color: @color__blogpost--background;
     margin: 0;
     position: relative;
     padding: 1px 0;
@@ -152,8 +152,8 @@
     @media @blog-small {
         padding-bottom: 0;
         p {
-            font-size: bkscale(@font-swatch5-font-size, 0.88);
-            line-height: bkscale(@font-swatch5-line-height, 0.88);
+            font-size: bkscale(@font__p--font-size, 0.88);
+            line-height: bkscale(@font__p--line-height, 0.88);
         }
     }
 }
@@ -166,7 +166,7 @@
 
 
 .post-header .title-link {
-    color: @font-swatch1-color;
+    color: @color__h1--text;
 }
 
 
@@ -182,13 +182,13 @@
 
     @media @blog-medium {
         margin: 0.5em 0 0.2em 0;
-        font-size: bkscale(@font-swatch2-font-size, 0.84);
-        line-height: bkscale(@font-swatch2-line-height, 0.84);
+        font-size: bkscale(@font__h2--font-size, 0.84);
+        line-height: bkscale(@font__h2--line-height, 0.84);
     }
     @media @blog-small {
         margin: 0.5em 0 0.2em 0;
-        font-size: bkscale(@font-swatch2-font-size, 0.70);
-        line-height: bkscale(@font-swatch2-line-height, 0.70);
+        font-size: bkscale(@font__h2--font-size, 0.70);
+        line-height: bkscale(@font__h2--line-height, 0.70);
     }
 }
 
@@ -200,9 +200,9 @@
 
 
 .post-excerpt .read-more {
-    background: @button-color;
-    color: contrast(@button-color, #000, #fff);
-    font-size: @font-swatch5-font-size;
+    background: @color__button--background;
+    color: @color__button--text;
+    font-size: @font__p--font-size;
     padding:  0.7em 1.4em;
     display: inline-block;
     margin:  1em 0 1.2em;
@@ -211,12 +211,12 @@
         display: block;
         margin: 0.5em -10px 0;
         padding:  0.5em 10px;
-        font-size: bkscale(@font-swatch5-font-size, 0.88);
-        line-height: bkscale(@font-swatch5-line-height, 0.88);
+        font-size: bkscale(@font__p--font-size, 0.88);
+        line-height: bkscale(@font__p--line-height, 0.88);
     }
 
     &:hover {
-        background: @button-hover-color;
+        background: @color__button--background--hover;
     }
 }
 
@@ -233,14 +233,14 @@
     // Timestamp
 
     .timestamp {
-        font-size: bkscale(@font-swatch5-font-size, 0.8);
-        border-left: 1px solid fade(@color-swatch5, 20%);
+        font-size: bkscale(@font__p--font-size, 0.8);
+        border-left: 1px solid fade(@color__p--text, 20%);
         padding: 1em 1.5em;
-        color: fade(@font-swatch5-color, 80%);
+        color: fade(@color__p--text, 80%);
         display: block;
         @media @blog-medium {
             padding: 0.8em 1em;
-            font-size: bkscale(@font-swatch5-font-size, 0.7);
+            font-size: bkscale(@font__p--font-size, 0.7);
         }
         @media @blog-small {
             padding: 0.5em 10px;

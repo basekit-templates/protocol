@@ -1,2 +1,4 @@
-# protocol
-Protocol BaseKit Template (based off Facet)
+Protocol
+=========
+
+V8 BaseKit Template

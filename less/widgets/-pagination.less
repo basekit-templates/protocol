@@ -27,14 +27,14 @@
 
     .button--pagination {
         background: transparent;
-        color: @link-color;
-        font-family: @font-swatch1-font-family;
-        font-size: @font-swatch5-font-size;
+        color: @color__link--text;
+        font-family: @font__h1--font-family;
+        font-size: @font__p--font-size;
         padding: 0;
         line-height: 1;
 
         @media @mobile {
-            font-size: bkscale(@font-swatch5-font-size, 0.88);
+            font-size: bkscale(@font__p--font-size, 0.88);
         }
 
 
@@ -45,12 +45,12 @@
 
 
         &:before, &:after {
-            background-color: @button-color;
+            background-color: @color__button--background;
             width: 1.5em;
             height: 1.5em;
             line-height: 1.5em;
             display: inline-block;
-            color: @button-text-color;
+            color: @color__button--text;
             text-align: center;
             margin-right: 0.3em;
             font-size: 1.5em;
@@ -64,7 +64,7 @@
 
 
         &:hover:before, &:hover:after {
-            background-color: @button-hover-color;
+            background-color: @color__button--background--hover;
         }
     }
 
@@ -109,11 +109,11 @@
     .button--pagination:not(.icon) {
         height: 1.5em;
         line-height: 1.5em;
-        border-top: 1px solid fade(@font-swatch5-color, 20%);
+        border-top: 1px solid fade(@color__p--text, 20%);
         padding: 0 0.5em;
         margin: 0 -0.15em;
         &:hover {
-            border-top: 1px solid @link-color;
+            border-top: 1px solid @color__link--text;
         }
     }
 
@@ -126,8 +126,8 @@
 
     .pagination-item.current {
         .button--pagination {
-            border-top-color: @color-swatch7;
-            color: @font-swatch5-color;
+            border-top-color: @color__primary;
+            color: @color__p--text;
         }
     }
 }
