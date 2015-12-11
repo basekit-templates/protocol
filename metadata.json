@@ -14,7 +14,7 @@
     {
         "Swatch 1": {
             "color1":"#ffffff",
-            "color2":"#ffffff",
+            "color2":"#ffb83f",
             "color3":"#4895e4",
             "color4":"#313131",
             "color5":"#313131",
@@ -149,7 +149,7 @@
     "styles": {
         "colors": {
             "color__primary": "@color-swatch7",
-            "color__secondary": "@color-swatch2"
+            "color__secondary": "@color-swatch1"
         },
         "site": {
             "color__body--background": "@color-swatch1",
@@ -212,7 +212,7 @@
         },
         "navigation": {
             "color__navigation--text": "@font-swatch6-color",
-            "color__navigation--text--selected": "@color-swatch3",
+            "color__navigation--text--selected": "@color-swatch2",
             "font__navigation--font-family" : "@font-swatch6-font-family",
             "font__navigation--font-size" : "@font-swatch6-font-size",
             "font__navigation--font-weight" : "@font-swatch6-font-weight",
@@ -226,7 +226,7 @@
             "color__feature-strapline--text" : "@color-swatch6",
             "color__feature-button--background" : "@color__secondary",
             "color__feature-button--background--hover" : "@color__button--background--hover",
-            "color__feature-button--text" : "@font-swatch8-color",
+            "color__feature-button--text" : "@font-swatch4-color",
             "color__feature-button--background--hover" : "contrast(@color__button--background, darken(@color__button--background, 10%), lighten(@color__button--background, 10%))",
             "font__feature-headline--font-family" : "@font-swatch8-font-family",
             "font__feature-headline--font-size" : "@font-swatch8-font-size",
