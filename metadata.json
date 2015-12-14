@@ -6,10 +6,10 @@
     "templateType":"standard",
     "pageTypes": ["home"],
      "images":[
+        "images/image1.jpg",
         "images/feature-bg.jpg",
         "images/logo.png",
-        "images/body-bg.jpg",
-        "images/image1.jpg"
+        "images/body-bg.jpg"
     ],
     "colorSwatches":
     {
