@@ -125,7 +125,7 @@
             "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "72px",
             "font-weight": "700",
-            "line-height": "72px",
+            "line-height": "80px",
             "color": "@color-swatch6",
             "letter-spacing": "inherit"
         },
