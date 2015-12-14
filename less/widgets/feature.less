@@ -119,12 +119,12 @@
         line-height: bkscale(@font__feature-headline--line-height, 0.88);
     }
     @media @feature-medium {
-        font-size: bkscale(@font__feature-headline--font-size, 0.78);
-        line-height: bkscale(@font__feature-headline--line-height, 0.78);
+        font-size: bkscale(@font__feature-headline--font-size, 0.6);
+        line-height: bkscale(@font__feature-headline--line-height, 0.6);
     }
     @media @feature-small {
-        font-size: bkscale(@font__feature-headline--font-size, 0.7);
-        line-height: bkscale(@font__feature-headline--line-height, 0.7);
+        font-size: bkscale(@font__feature-headline--font-size, 0.5);
+        line-height: bkscale(@font__feature-headline--line-height, 0.5);
     }
 }
 
@@ -173,15 +173,11 @@
     float: left;
     clear: both;
 
-    @media @feature-large {
+    @media @tablet {
         font-size: bkscale(@font__feature-strapline--font-size, 0.78);
     }
 
-    @media @feature-medium {
-        font-size: bkscale(@font__feature-strapline--font-size, 0.68);
-    }
-
-    @media @feature-small {
+    @media @mobile {
         font-size: bkscale(@font__feature-strapline--font-size, 0.55);
         line-height: bkscale(@font__feature-strapline--line-height, 0.55);
     }
@@ -204,7 +200,8 @@
         line-height: 1em;
         height: 1em;
         text-align: center;
-        font-size: 2em;
+        font-size: 30px;
+        padding-right: 12px;
 
     }
 
