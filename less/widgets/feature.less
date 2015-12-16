@@ -52,18 +52,17 @@
     -ms-flex-align: center;
     align-items: center;
     background-size: cover;
-    padding: 1em 0;
     overflow: auto;
 
 
     @media @feature-x-large {
-        min-height: 700px;
+        min-height: 0;
     }
     @media @feature-large {
-        min-height: 500px;
+        min-height: 0;
     }
     @media @feature-medium, @feature-small {
-        min-height: 300px;
+        min-height: 0;
     }
 
 
@@ -75,15 +74,13 @@
 // Content Wrap
 // ------------------------------
 
-
 .feature__content-wrap {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 13px;
-    position: relative;
-    z-index: 1;
-    background-color: @color__feature-content--background;
+    max-width: 100%;
+    vertical-align: middle;
+    display: table-cell;
+    background-color: rgba(43,48,64,0.2);
 }
 
 
