@@ -207,13 +207,14 @@
 			}
 
 			@media @tablet {
-				width: auto;
 				margin: 0 0 1em 0;
-				float: none;
 			}
 
 			@media @mobile {
 				margin: 0 0 0.5em 0;
+                width: auto;
+                float: none;
+                text-align: center;
 			}
 		}
 	}
@@ -227,6 +228,11 @@
 	background-color: @color__footer--background;
 }
 
+.footer-secondary-widgets .social-list {
+    @media @bp-global-small {
+        text-align: inherit;
+    }
+}
 
 
 
