@@ -10,10 +10,18 @@
 
 
 .logo {
-    margin: 13px;
+    margin: 12px 0;
+
     @media @bp-global-medium {
         display: inline-block;
         vertical-align: middle;
+    }
+    @media @feature-medium {
+        margin-left: 10px;
+    }
+    @media @mobile {
+        margin-bottom: 0;
+        margin-left: 0;
     }
 }
 

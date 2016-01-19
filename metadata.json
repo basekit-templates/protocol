@@ -167,7 +167,7 @@
             "color__h2--text": "@color-swatch4",
             "color__h3--text": "@color-swatch4",
             "color__h4--text": "@color-swatch4",
-            "color__p--text": "@color-swatch5",
+            "color__p--text": "#7d7d7d",
             "font__h1--font-family" : "@font-swatch1-font-family",
             "font__h1--font-size" : "@font-swatch1-font-size",
             "font__h1--font-weight" : "@font-swatch1-font-weight",
