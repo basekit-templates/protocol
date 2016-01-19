@@ -187,9 +187,11 @@
             padding-bottom: 30px;
 
             @media @bp-global-small, @bp-global-medium {
-                text-align: center;
                 padding-top: 16px;
                 padding-bottom: 0
+            }
+            @media @mobile {
+                text-align: center;
             }
         }
 
@@ -208,9 +210,8 @@
 			}
 
 			@media @tablet {
-				width: auto;
-				margin: 0 0 1em 0;
-				float: none;
+                width: 29%;
+				margin: 1em;
 			}
 
 			@media @mobile {
@@ -232,6 +233,11 @@
 	background-color: @color__footer--background;
 }
 
+.footer-secondary-widgets .social-list {
+    @media @bp-global-small {
+        text-align: inherit;
+    }
+}
 
 
 

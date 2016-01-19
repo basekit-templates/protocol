@@ -54,6 +54,10 @@
 	position: absolute;
 	bottom: 0;
 	left: 10px;
+    @media @mobile {
+        position: relative;
+        left: 0;
+    }
 }
 
 .twitter__avatar-image {
@@ -72,6 +76,14 @@
 	}
 }
 
+.footer-secondary-widgets .widget__profile .twitter__avatar {
+    @media @bp-global-small {
+        text-align: center;
+        margin: 0px auto;
+        display: inline-block;
+        position: relative;
+    }
+}
 
 
 
@@ -110,8 +122,10 @@
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
+    @media @bp-global-small {
+        display: block;
+    }
 }
-
 
 
 
@@ -253,7 +267,7 @@
 		min-height: 26px;
 		line-height: 26px;
 		font-size: 13px;
-		margin-left: 42px;
+		margin-left: 0;
 	}
 
 }
