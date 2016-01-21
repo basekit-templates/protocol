@@ -20,7 +20,23 @@
         margin-left: 14px;
     }
 
+    .post-image {
+        .image {
+            display: none;
+            visibility: hidden;
+        }
 
+        .image-link {
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            width: 100%;
+
+            @media @blog-medium {
+                height: 300px;
+            }
+        }
+    }
 
     // Post Article
 
