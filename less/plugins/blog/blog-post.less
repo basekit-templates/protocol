@@ -46,7 +46,7 @@
 
 
     .post-article--has-image .post-content {
-        margin-top: -26px;
+        margin-top: -75px;
         @media only screen and (max-width : 1500px) {
             margin-top: 0;
         }
@@ -81,6 +81,18 @@
     background-color: contrast(@color__body--background, lighten(@color__body--background, 2%), darken(@color__body--background, 2%));
     position: relative;
     text-align: center;
+
+    .image {
+        display: none;
+        visibility: hidden;
+    }
+
+    .image-link {
+        background-size: cover;
+        background-position: center;
+        height: 650px;
+        width: 100%;
+    }
 }
 
 
@@ -125,7 +137,7 @@
 
 
 .post-header, .post-excerpt, .post-body {
-    max-width: 850px;
+    max-width: 960px;
     margin: 0 auto;
     padding-left: 18px;
     padding-right: 18px;
