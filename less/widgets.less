@@ -1,5 +1,5 @@
 // -----------------------------
-// Facet Template: CSS > Widgets
+// Protocol Template: CSS > Widgets
 // -----------------------------
 
 // -----------------------------
@@ -78,7 +78,54 @@
 // -----------------------------
 
 
-@import "@{templateLocal}/less/widgets/logo.less";
+// Logo
+// ------------------------------
+
+
+.logo {
+    margin: 12px 0;
+
+    @media @bp-global-medium {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 13px 0 13px 13px;
+    }
+    @media @feature-medium {
+        margin-left: 10px;
+    }
+    @media @mobile {
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+}
+
+
+
+
+// Logo, Logo Link
+// ------------------------------
+
+
+.logo, .logo-link {
+    // Removes space around inline elements
+    line-height: 0;
+}
+
+
+
+
+// Logo Image
+// ------------------------------
+
+
+.logo-image {
+    // Restricting maximum image size
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+}
 
 
 
@@ -88,7 +135,23 @@
 // -----------------------------
 
 
-@import "@{templateLocal}/less/widgets/companyname.less";
+.company-link {
+    margin: 0 13px;
+    color: @color__companyname--text;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    @media @bp-global-medium {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    @media @bp-global-small {
+        font-size: bkscale(@font__companyname--font-size, 0.8);
+        margin: 0px 13px 8px;
+    }
+}
 
 
 
@@ -129,7 +192,42 @@
 // ------------------------------
 
 
-@import "@{templateLocal}/less/widgets/dropbox.less";
+// Dropbox Button, Dropbox Button Label
+// ------------------------------------
+
+
+.dropbox__button, .dropbox__label {
+    vertical-align: top;
+}
+
+
+
+
+// Dropbox Button
+// ------------------------------
+
+
+.dropbox__button {
+    margin-right: 0; // LESS Framework Reset
+}
+
+
+
+
+// Dropbox Button Label
+// ------------------------------
+
+
+.dropbox__label {
+    display: inline-block;
+    background-color: @color__secondary;
+    line-height: bkscale(@font__button--font-size, 2.5);
+    padding: 0 1em;
+    font-size: 16px;
+    @media @mobile {
+        line-height: bkscale(@font__button--font-size, 2.2);
+    }
+}
 
 
 // 5.3 Click to call
@@ -216,7 +314,18 @@
 // -----------------------------
 
 
-@import "@{templateLocal}/less/widgets/divider.less";
+hr.rule {
+    height: 5px;
+    background-color: contrast(@color__body--background, @widget-contrast-light, @widget-contrast-dark);
+
+    @media @tablet {
+        height: 3px;
+    }
+
+    @media @mobile {
+        height: 1px;
+    }
+}
 
 
 
@@ -236,7 +345,48 @@
 // -----------------------------
 
 
-@import "@{templateLocal}/less/widgets/map.less";
+.widget__map {
+    border: 35px solid #ffffff;
+
+    @media @tablet {
+        border-width: 20px;
+    }
+
+    @media @mobile {
+        border-width: 5px;
+    }
+}
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+
+
+@media @bp-global-columns {
+
+
+
+
+    // All Columns
+    // ------------------------------
+
+
+    .responsivecolumns {
+
+        // Widget Map
+
+       .widget__map {
+            border-width: 5px;
+       }
+    }
+}
 
 
 
