@@ -303,7 +303,7 @@
 
 .product-body {
 
-    margin-bottom: 26px;
+    margin-bottom: 0;
 
     // Paragraph
 
@@ -330,6 +330,7 @@
 .product-actions {
     display: inline-block;
     margin-bottom: 1em;
+    margin-top: 0;
 
 
 
@@ -377,7 +378,9 @@
         min-width: 100px;
         margin: 0 0.6em 1em 0;
 
-
+        @media @mobile {
+            margin: 0;
+        }
 
 
         // Label

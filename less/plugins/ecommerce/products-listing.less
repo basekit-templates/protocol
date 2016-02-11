@@ -257,6 +257,9 @@
         -webkit-align-items: stretch;
         -ms-flex-align: stretch;
         align-items: stretch;
+        @media @tablet {
+            margin: 20px 0;
+        }
     }
 
     // First Form Group
@@ -267,7 +270,8 @@
         flex: 1 1 auto;
 
         .input {
-            height: 50px;
+            height: 53px;
+            background-color: #ffffff;
         }
     }
 
@@ -294,7 +298,7 @@
 
                 text-align: center;
                 line-height: 48px;
-                color: contrast(@color__button--background, #000, #fff);
+                color: #ffffff;
                 font-size: 20px;
             }
 
