@@ -3,13 +3,12 @@
 // ------------------------------
 
 // 1. #Global Breakpoints
-// 2. #Floating Footer Fix
-// 3. #Header
-// 4. #Footer
-// 5. #Main Zone
-// 6. #Typography
-// 7. #Page Titles
-// 8. #Relevant Content Footer
+// 2. #Header
+// 3. #Footer
+// 4. #Main Zone
+// 5. #Typography
+// 6. #Page Titles
+// 7. #Relevant Content Footer
 
 
 
@@ -29,63 +28,9 @@
 @bp-global-columns:   ~"only screen and (min-width : 478px)";
 
 
-// ------------------------------
-// 2. #Floating Footer Fix
-// ------------------------------
-
-// Avoids Floating Footer
-// ------------------------------
-
-
-@media @bp-global-large {
-    .page-content {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-direction: normal;
-        -moz-box-direction: normal;
-        -webkit-box-orient: vertical;
-        -moz-box-orient: vertical;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        -webkit-box-pack: start;
-        -moz-box-pack: start;
-        -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-align-content: flex-start;
-        -ms-flex-line-pack: start;
-        align-content: flex-start;
-        -webkit-box-align: stretch;
-        -moz-box-align: stretch;
-        -webkit-align-items: stretch;
-        -ms-flex-align: stretch;
-        align-items: stretch;
-        min-height: 100vh;
-        @media @mobile {
-            display: block;
-            min-height: inherit;
-        }
-    }
-
-    .block-content {
-        -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
-    }
-}
-
-
-
 
 // ------------------------------
-// 3. #Header
+// 2. #Header
 // ------------------------------
 
 
@@ -158,7 +103,7 @@
 
 
 // ------------------------------
-// 4. #Footer
+// 3. #Footer
 // ------------------------------
 
 
@@ -247,7 +192,7 @@
 
 
 // ------------------------------
-// 5. #Main Zone
+// 4. #Main Zone
 // ------------------------------
 
 
@@ -256,6 +201,7 @@
 .zone-content {
 	padding: 4%;
 	max-width: 1300px;
+    min-height: 150px;
 	margin: 0 auto;
 }
 
@@ -263,7 +209,7 @@
 
 
 // -------------------------------
-// 6. #Typography
+// 5. #Typography
 // -------------------------------
 
 
@@ -280,7 +226,7 @@ a {
 
 
 // ------------------------------
-// 7. #Page Titles
+// 6. #Page Titles
 // ------------------------------
 
 
@@ -382,7 +328,7 @@ a {
 
 
 // ------------------------------
-// 8. #Relevant Content Footer
+// 7. #Relevant Content Footer
 // ------------------------------
 
 
