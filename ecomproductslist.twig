@@ -10,28 +10,28 @@
 			<div class="title-widget">
 
 				<form class="product-search" method="GET" action="/store">
-					<fieldset class="fieldset  fieldset--search  ecomproductslist__fieldset--search">
+                    <fieldset class="fieldset  fieldset--search  ecomproductslist__fieldset--search">
 
-                        <legend class="legend  ecomproductslist__legend">Search Products</legend>
+                        <legend class="legend  ecomproductslist__legend">{{ 'widgets.ecomproductlist.search_products'|translate('Search Products') }}</legend>
 
                         <div class="form-body  ecomproductslist__form-body">
 
-							<div class="form-group  ecomproductslist__form-group">
+                            <div class="form-group  ecomproductslist__form-group">
 
-                                <label class="label  label--search  ecomproductslist__label" for="page-zones__main-widgets__productslist__ecomproductslist__search">Search Products</label>
+                                <label class="label  label--search  ecomproductslist__label" for="page-zones__main-widgets__productslist__ecomproductslist__search">{{ 'widgets.ecomproductlist.search_products'|translate('Search Products') }}</label>
 
-                                <input class="input  input--search  ecomproductslist__input  js-display-control" id="page-zones__main-widgets__productslist__ecomproductslist__search" name="productlist-search" placeholder="Search term" type="search" value="">
+                                <input class="input  input--search  ecomproductslist__input  js-display-control" id="page-zones__main-widgets__productslist__ecomproductslist__search" name="productlist-search" placeholder="{{'widgets.ecomproductlist.search_placeholder'|translate('Search term')}}" type="search" value="">
 
                             </div>
 
                             <div class="form-group  ecomproductslist__form-group">
-                                <button class="button  button--submit  ecomproductslist__button" type="submit">Search</button>
+                                <button class="button  button--submit  ecomproductslist__button" type="submit">{{ 'widgets.ecomproductlist.search_submit'|translate('Search') }}</button>
                             </div>
 
                         </div>
 
                     </fieldset>
-				</form>
+                </form>
 
 			</div>
 		</div>
