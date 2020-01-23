@@ -34,8 +34,8 @@
 
 .responsiveslideshow .slides-list {
     @media @mobile {
-        min-height: 360px;
-        height: 360px;
+        min-height: 400px;
+        height: 400px;
     }
 }
 
@@ -48,7 +48,7 @@
 .responsiveslideshow__slide-item {
 	position: relative;
 	@media @mobile {
-        height: 300px;
+        height: auto;
     }
 }
 
@@ -80,6 +80,10 @@
 	@media @slideshow-small {
 		padding-bottom: 100%;
 	}
+
+	@media @mobile {
+        min-height: 0;
+    }
 }
 
 
