@@ -1,0 +1,83 @@
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+#migrated-site {
+
+
+    // Stylesheet overrides
+    // -----------------------------
+
+
+    .zone-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    
+    // Edit
+    &.edit {
+    }
+
+
+
+
+    // Migration styles
+    // -----------------------------
+    
+    
+    // Applies spacing to widgets to mimic container width
+    .empty-zone,
+    #page-zones__main:empty,
+    #page-zones__main > .widget:not([data-name="row"]),
+    .row:not(.row--width-no-padding) .row__container {
+        width: 90%;
+        max-width: calc(~'1300px - 8%');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    
+    // Adds spacing to a section when a widget follows it
+    #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]) + [data-name="row"]:not(:last-child),
+    &.edit #page-zones__main-overlay + .widget:not([data-name="row"]) {
+        margin-top: 80px;
+        
+        @media @tablet {
+            margin-top: 40px;
+        }
+        @media @mobile {
+            margin-top: 20px;
+        }
+    }
+    
+    
+    // First widget
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 30px;
+    }
+    .page--default #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 0;
+    }
+
+    
+    // Move spacing to last widget in the main zone (not sections)
+    #page-zones__main > .widget:not([data-name="row"]):last-child {
+        margin-bottom: 20px;
+    }
+    
+    
+    // Remove spacing on last widget in section column
+    [data-name="row"] [data-name="responsivecolumns"] .column .widget {
+        margin-bottom: 0;
+    }
+    
+    
+    // Widget styles
+    [data-name="row"] {
+    }
+
+}
