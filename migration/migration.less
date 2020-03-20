@@ -33,7 +33,7 @@
     #page-zones__main:empty,
     #page-zones__main > .widget:not([data-name="row"]),
     .row:not(.row--width-no-padding) .row__container {
-        width: 90%;
+        width: 92%;
         max-width: calc(~'1300px - 8%');
         margin-left: auto;
         margin-right: auto;
@@ -57,7 +57,7 @@
     
     // First widget
     #page-zones__main > .widget:not([data-name="row"]):first-child {
-        margin-top: 30px;
+        margin-top: 4%;
     }
     .page--default #page-zones__main > .widget:not([data-name="row"]):first-child {
         margin-top: 0;
@@ -76,8 +76,63 @@
     }
     
     
+    // Remove spacing from first light section
+    .default-page,
+    .product-page {
+        #page-zones__main > .style--light:first-child .row--style-light .row__container {
+            padding-top: 0;
+            
+            @media @tablet {
+                padding-top: 4%;
+            }
+            @media @mobile {
+                // margin-top: 20px;
+            }
+        }
+    }
+    
+    // Remove spacing from first light section
+    // #page-zones__main > [data-name="row"].style--light + .widget:not([data-name="row"]) {
+    //     margin-top: 0;
+    // }
+    
+    
     // Widget styles
     [data-name="row"] {
+        .contactform__form-body,
+        .contactform__legend {
+            float: inherit;
+        }
+        .email:before,
+        .phone-number-link:before {
+            display: none;
+        }
+        .social-link:before {
+            display: inline-block;
+            background-color: transparent;
+        }
+        .socialicons__social-name {
+            display: none;
+        }
+        .social-link {
+            min-width: inherit;
+        }
+        .socialicons__social-item {
+            margin-right: 4px;
+            margin-bottom: 0;
+        }
+        .post-header,
+        .post-excerpt,
+        .post-body {
+            margin: inherit;
+        }
+        .post-excerpt,
+        .post-body {
+            padding-bottom: 0;
+        }
+        .post-article--has-image .post-content {
+            margin-top: inherit;
+        }
     }
 
 }
