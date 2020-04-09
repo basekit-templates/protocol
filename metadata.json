@@ -1,4 +1,5 @@
 {
+    "versionTenCompatible": 1,
     "name":"protocol",
     "widgetVersion": 2,
     "screenshot":"protocol-screenshot.jpg",
