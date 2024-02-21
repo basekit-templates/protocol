@@ -1,25 +1,20 @@
-// --------------------------------------
+// --------------------------------------------
 // Protocol Template: CSS > Widgets > Slideshow
-// --------------------------------------
-
+// --------------------------------------------
 
 
 // ---------------------------------
 // Breakpoints for slideshow layouts
 // ---------------------------------
 
-
 @slideshow-large: ~"only screen and (min-width : 1300px)";
 @slideshow-medium: ~"only screen and (min-width : 850px) and (max-width : 1300px)";
 @slideshow-small: ~"only screen and (max-width : 850px)";
 
 
-
-
 // ---------------------------------
 // Slides List
 // ---------------------------------
-
 
 // Slideshow Mobile
 // ----------------
@@ -44,7 +39,6 @@
 // Slideshow Item
 // ------------------------------
 
-
 .responsiveslideshow__slide-item {
 	position: relative;
 	@media @mobile {
@@ -54,7 +48,6 @@
 
 // Prevents two slides from displaying at the same time
 // because of slow JS state changes
-
 .slide-item.current + .slide-item {
 	display: none;
 }
@@ -64,12 +57,9 @@
 }
 
 
-
-
 // ------------------------------
 // Figure
 // ------------------------------
-
 
 .responsiveslideshow__figure {
 	min-height: 100px;
@@ -87,12 +77,9 @@
 }
 
 
-
-
 // ------------------------------
 // Slide Navigation
 // ------------------------------
-
 
 .slide-navigation {
 	display: block;
@@ -100,12 +87,8 @@
 	top: ~"calc(50% - 60px)";
 	margin: 0;
 
-
-
-
 	// Button
 	// ------------------------------
-
 
 	.button {
 		position: absolute;
@@ -118,101 +101,71 @@
 		}
 	}
 
-
-
-
 	// Control Text
 	// ------------------------------
-
 
 	.control-text {
 		display: none;
 	}
 }
 
-
-
-
 // Previous Button
 // ------------------------------
-
 
 .responsiveslideshow__previous-button {
 
 	// Icon
-
 	&:before {
-		content: '\f104';
 		display: block;
 		margin: 0;
 	}
 }
 
-
-
-
 // Next Button
 // ------------------------------
-
 
 .responsiveslideshow__next-button {
 
 	// Icon
-
 	&:after {
-		content: '\f105';
 		display: block;
 		margin: 0;
 		padding-left: 0.1em;
 	}
 }
 
-
-
-
 // Pause Toggle
 // ------------------------------
-
 
 .responsiveslideshow__pause-toggle {
 
 	// Icon
-
 	&:before {
 		display: block;
 		margin: 0;
 	}
 
 	// Play Icon
-
 	&.pause:before {
 		content: '\f04b';
 	}
 }
 
 
-
-
 // ------------------------------
 //  Large Layout
 // ------------------------------
 
-
 @media @slideshow-large {
-
-
-
 
 	// Slide Navigation
 	// ------------------------------
-
 
 	.slide-navigation {
 		left: 0;
 		right: 0;
 
 		// Button
-
 		.button {
 			width: 60px;
 			height: 60px;
@@ -223,19 +176,16 @@
 	}
 
 	// Previous Button
-
 	.responsiveslideshow__previous-button {
 		left: 30px;
 	}
 
 	// Next Button
-
 	.responsiveslideshow__next-button {
 		right: 30px;
 	}
 
 	// Pause Toggle
-
 	.responsiveslideshow__pause-toggle {
 		left: 91px;
 		.pause-toggle-only & {
@@ -248,21 +198,14 @@
 }
 
 
-
-
 // ------------------------------
 //  Medium Layout
 // ------------------------------
 
-
 @media @slideshow-medium {
-
-
-
 
 	// Slide Navigation
 	// ------------------------------
-
 
 	.slide-navigation {
 		left: 0;
@@ -271,7 +214,6 @@
 		height: 100px;
 
 		// Button
-
 		.button {
 			width: 40px;
 			height: 40px;
@@ -282,34 +224,22 @@
 		}
 	}
 
-
-
-
 	// Previous Button
 	// ------------------------------
-
 
 	.responsiveslideshow__previous-button {
 		left: 0;
 	}
 
-
-
-
 	// Next Button
 	// ------------------------------
-
 
 	.responsiveslideshow__next-button {
 		right: 0;
 	}
 
-
-
-
 	// Pause Toggle
 	// ------------------------------
-
 
 	.responsiveslideshow__pause-toggle {
 		left: 41px;
@@ -319,7 +249,6 @@
 		}
 
 		// Icon
-
 		&:before {
 			font-size: 14px;
 		}
@@ -327,21 +256,14 @@
 }
 
 
-
-
 // ------------------------------
 //  Small Layout
 // ------------------------------
 
-
 @media @slideshow-small {
-
-
-
 
 	// Slide Navigation
 	// ------------------------------
-
 
 	.slide-navigation {
 		margin-top: 1px;
@@ -376,7 +298,6 @@
 		align-items: center;
 
 		// Button
-
 		.button {
 			position: relative;
 			height: 40px;
@@ -392,7 +313,6 @@
 	}
 
 	// Pause Toggle
-
 	.responsiveslideshow__pause-toggle {
 		margin: 0 1px;
 		width: auto;
@@ -405,40 +325,26 @@
 }
 
 
-
-
 // ------------------------------
 // Slideshow Captions
 // ------------------------------
 
-
-
-
 // Caption
 // ------------------------------
-
 
 .responsiveslideshow .caption {
 	padding: 0;
 }
 
-
-
-
 // Image Title, Image Description
 // ------------------------------
-
 
 .responsiveslideshow__image-title, .responsiveslideshow__image-description {
 	width: auto;
 }
 
-
-
-
 // Image Title
 // ------------------------------
-
 
 .responsiveslideshow__image-title {
 	background-color: @color__slideshow-caption--background;
@@ -446,12 +352,8 @@
 	padding-bottom: 0;
 }
 
-
-
-
 // Image Description
 // ------------------------------
-
 
 .responsiveslideshow__image-description {
 	background: mix(@color__body--background, @color__slideshow-caption--background, 10%);
@@ -461,7 +363,6 @@
 @media @slideshow-large {
 
 	// Caption
-
 	.responsiveslideshow .caption {
 		position: absolute;
 		width: auto;
@@ -470,14 +371,12 @@
 	}
 
 	// Image Title
-
 	.responsiveslideshow__image-title {
 		padding: 0.8em 6%;
 		position: relative;
 	}
 
 	// Image Description
-
 	.responsiveslideshow__image-description {
 		padding: 0.8em 6%;
 	}
@@ -486,7 +385,6 @@
 @media @slideshow-medium {
 
 	// Caption
-
 	.responsiveslideshow .caption {
 		font-size: 0;
 		display: -webkit-box;
@@ -523,21 +421,18 @@
 	}
 
 	// Image title, Image Description
-
 	.responsiveslideshow__image-title, .responsiveslideshow__image-description {
 		display: inline-block;
 		padding: 0.8em 1em;
 	}
 
 	// Image Title
-
 	.responsiveslideshow__image-title {
 		font-size: bkscale(@font__p--font-size, 0.7);
 		line-height: bkscale(@font__p--line-height, 0.7);
 	}
 
 	// Image Description
-
 	.responsiveslideshow__image-description {
 		font-size: bkscale(@font__p--font-size, 0.7);
 		line-height: bkscale(@font__p--line-height, 0.7);
@@ -552,7 +447,6 @@
 @media @slideshow-small {
 
 	// Caption
-
 	.responsiveslideshow .caption {
 		position: absolute;
 		bottom: 0;
@@ -562,7 +456,6 @@
 	}
 
 	// Image Title. Image Description
-
 	.responsiveslideshow__image-title, .responsiveslideshow__image-description {
 		color: contrast(@color__slideshow-caption--background, #000, #fff);
 		background-color: transparent;
@@ -572,18 +465,12 @@
 }
 
 
-
-
 // ------------------------------
 // Slideshow Pagination
 // ------------------------------
 
-
-
-
 // Pagination Item
 // ------------------------------
-
 
 .slide-pagination {
 	position: relative;
@@ -591,17 +478,12 @@
 	right: auto;
 }
 
-
-
-
 // Pagination Item
 // ------------------------------
-
 
 .responsiveslideshow .responsiveslideshow__pagination-item {
 
 	// Button
-
 	.button {
 		cursor: pointer;
 		background-color: @color__slideshow-pagination-item--background;
@@ -617,27 +499,16 @@
 	}
 
 	// Selected Button
-
 	&.selected .button {
 		background-color: @color__slideshow-pagination-item--background--selected;
 		color: @color__slideshow-pagination-item--text--selected;
-
 	}
 }
 
-
-
-
-
-
 @media @slideshow-large {
-
-
-
 
 	// Pagination List
 	// ------------------------------
-
 
 	.responsiveslideshow__pagination-list {
 		display: -webkit-box;
@@ -672,12 +543,8 @@
 		min-height: 20px;
 	}
 
-
-
-
 	// Pagination Item
 	// ------------------------------
-
 
 	.responsiveslideshow__pagination-item {
 		-webkit-box-flex: 1;
@@ -692,7 +559,6 @@
 		}
 
 		// Button
-
 		.button {
 			width: 100%;
 			height: 7px;
@@ -705,7 +571,6 @@
 		}
 
 		// Selected Button
-
 		&.selected .button {
 			height: auto;
 			background-color: @color__slideshow-pagination-item--text--selected;
@@ -717,12 +582,8 @@
 
 @media @slideshow-medium {
 
-
-
-
 	// Pagination List
 	// ------------------------------
-
 
 	.responsiveslideshow__pagination-list {
 		display: block;
@@ -730,12 +591,8 @@
 		text-align: center;
 	}
 
-
-
-
 	// Pagination Item
 	// ------------------------------
-
 
 	.responsiveslideshow__pagination-item {
 		width: 14px;
@@ -743,7 +600,6 @@
 		margin: 0 3px;
 
 		// Button
-
 		.button {
 			text-indent: 100%;
 			overflow: hidden;
@@ -755,24 +611,16 @@
 
 @media @slideshow-small {
 
-
-
-
 	// Pagination List
 	// ------------------------------
-
 
 	.responsiveslideshow__pagination-list {
 		margin-top: 8px;
 		text-align: center;
 	}
 
-
-
-
 	// Pagination Item
 	// ------------------------------
-
 
 	.responsiveslideshow__pagination-item {
 		width: 10px;
@@ -781,7 +629,6 @@
 		overflow: hidden;
 
 		// Button
-
 		.button {
 			text-indent: 100%;
 			overflow: hidden;
@@ -790,18 +637,12 @@
 }
 
 
-
-
 // ---------------------------------
 // Columns variations
 // ---------------------------------
 
-
-
-
 // All Columns
 // ------------------------------
-
 
 @media @bp-global-columns {
 	.responsivecolumns {
@@ -811,14 +652,12 @@
 		}
 
 		// Caption
-
 		.responsiveslideshow .caption {
 			left: 0;
 			bottom: 0;
 		}
 
 		// Image Title, Image Description
-
 		.responsiveslideshow__image-title, .responsiveslideshow__image-description {
 			font-size: bkscale(@font__p--font-size, 0.8);
 			padding: 0.4em 2%;
@@ -826,60 +665,48 @@
 		}
 
 		// Slide navigation
-
 		.slide-navigation {
 			top: 0px;
 		}
 
 		// Navigation button
-
 		.slide-navigation .button {
 			top: 0;
 			margin-top: 0;
 		}
 
 		// Previous button
-
 		.responsiveslideshow__previous-button {
 			left: 0;
 		}
 
 		// Next button
-
 		.responsiveslideshow__next-button {
 			right: 0;
 		}
 
 		// Pause Toggle
-
 		.responsiveslideshow__pause-toggle {
 			left: 41px;
-
 		}
 
-
-
 		// Pagination list
-
 		.responsiveslideshow__pagination-list {
 			margin-top: 1px;
 		}
 
 		// Pagination List
-
 		.responsiveslideshow__pagination-list {
 			display: block;
 			text-align: center;
 		}
 
 		// Pagination Item
-
 		.responsiveslideshow__pagination-item {
 			display: inline-block;
 		}
 
 		// Pagination Button
-
 		.responsiveslideshow__pagination-item .button, .responsiveslideshow__pagination-item.selected .button {
 			width: 8px;
 			height: 8px;
@@ -890,12 +717,8 @@
 		}
 	}
 
-
-
-
 	// 4 columns
 	// ------------------------------
-
 
 	.columns-four-first,
 	.columns-four-second,
@@ -907,5 +730,3 @@
 	}
 
 }
-
-
