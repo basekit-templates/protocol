@@ -82,17 +82,6 @@
 
 
 
-// Content Inner Wrap
-// ------------------------------
-
-
-.feature__content-inner-wrap {
-
-}
-
-
-
-
 // Headline
 // ------------------------------
 
@@ -185,26 +174,25 @@
     &:after {
         color: @color__body--background;
         font-family: 'FontAwesome', sans-serif;
-        content: '\f105';
+        content: '\f054';
         position: absolute;
-        right: 0;
+        right: .65em;
         top: 50%;
         margin-top: -0.5em;
         width: 1.15em;
         line-height: 1em;
         height: 1em;
         text-align: center;
-        font-size: 30px;
-        padding-right: 12px;
+        font-size: 20px;
+        padding-right: 0;
 
         @media @tablet {
-            font-size: 22px;
+            font-size: 16px;
         }
 
         @media @mobile {
-            padding-left: 8px;
+            right: .25em;
         }
-
     }
 
     // Right Arrow Background
